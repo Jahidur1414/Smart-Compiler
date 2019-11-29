@@ -1,0 +1,93 @@
+1---Comment remove
+2---Parenthesis overflow
+3---Linker Error
+4---Logical statement error
+5---Construct written wrong
+
+
+Input-------------------------
+
+
+
+#inasffsafdsf <stdio.h>
+
+innnnt Mainnnnnnn()))))))))
+{
+	prinnnnaadf("Something !\n")))))));
+	//aadfsdafsaf
+
+	/*
+		fsgtyryrt
+		asfergertgrt
+	*/
+
+	innnnnt a, b, c, i
+
+	sccccf("%d", &a)));)))))
+
+	foafasr(i=====1; i<<<<<100; i++++)
+	{
+		isdf(a%2=====0)
+		{
+			PRINTF("Even\n);;;;;;;;;
+		}
+		Elseeee ifff(a%2!=0)
+		{
+			printttF("Odd\n");
+		}
+	}
+
+	innNnt j=1
+
+	Whileeee(a=====100)))
+	{
+		IF(j%2=====0)
+		{
+			printff("%d\n", j);;;;;;;
+		}
+		ELSE{
+			PRINTF("Odd number\n")
+                }
+	}
+
+}
+
+
+Output----------------------------
+
+#include <stdio.h>
+
+int main()
+{
+	printf("Something !\n");
+
+	int a, b, c, i;
+
+	scanf("%d", &a);
+
+	for(i=1; i<100; i++++)
+	{
+		if(a%2==0)
+		{
+			printf("Even\n);
+		}
+		else if(a%2!=0)
+		{
+			printf("Odd\n");
+		}
+	}
+
+	int j=1;
+
+	while(a==100)
+	{
+		if(j%2==0)
+		{
+			printff("%d\n", j);
+		}
+		else{
+			printf("Oddd number\n");
+                }
+	}
+
+}
