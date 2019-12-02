@@ -1,0 +1,96 @@
+#include <bits/stdc++.h>
+#include <map>
+#include <iostream>
+#include <string>
+#include <cstdlib>
+
+using namespace std;
+
+map<string, int> mp;
+
+void symboltable(char str[])
+{
+    cout<<str<<endl;
+
+    string name;
+    string number;
+    string tm;
+    for(int i=0; i<=strlen(str); i++)
+    {
+        if(str[i]==' ' || str[i]=='\0' || str[i]==',' || str[i]==';')
+        {
+            int dk=0;
+            for(int x=0; x<=tm.size(); x++)
+            {
+                if(tm[x]=='=')
+                {
+                    dk=1;
+                    break;
+                }
+            }
+
+            if(dk==1)
+            {
+                int p=0;
+                for(int j=0; tm[j]!='='; j++)
+                {
+                    name+=tm[j];
+                    p=j;
+                }
+                for(int j=p+2; j<=tm.size(); j++)
+                {
+                    number+=tm[j];
+                }
+
+
+                cout<<"Name ---- "<<name<<endl;
+                stringstream geek(number);
+                int num = 0;
+                geek >> num;
+                cout<<"Number ---- "<<num<<endl;
+
+                mp[name]=num;
+            }
+
+            name.clear();
+            number.clear();
+            tm.clear();
+        }
+        else
+        {
+            tm+=str[i];
+        }
+    }
+}
+void printmp()
+{
+    map<string,int>::const_iterator it;
+
+    cout<<"All variable name and their values "<<endl;
+
+    for (it = mp.begin(); it!= mp.end(); it++)
+    {
+
+        cout << it->first<<" = "<< it->second<<endl;
+    }
+}
+int main()
+{
+    char str[1000];
+
+    while(1)
+    {
+        cout<<"Enter the string "<<endl;
+        gets(str);
+
+        if(strcasecmp(str, "stop")==0)
+        {
+            break;
+        }
+        else
+        {
+            symboltable(str);
+        }
+    }
+    printmp();
+}
